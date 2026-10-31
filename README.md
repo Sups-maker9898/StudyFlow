@@ -23,7 +23,7 @@ Navigation graph: `res/navigation/nav_graph.xml`. The bottom bar switches Assign
 - `StudyRepository.kt` – in-memory store with sample data; method names mirror the planned DAOs
 - `DateUtils.kt` – D-day label and "urgent" check (due in ≤ 3 days or overdue → red)
 
-## Next steps (weeks 13–14): add Room
+## Next steps: add Room
 1. Add the Room + KSP dependencies (check the versions that match your AGP).
 2. Turn `Course` / `Assignment` into `@Entity` classes (`courses`, `assignments`, FK `courseId`, CASCADE).
 3. Create `CourseDao`, `AssignmentDao`, `AppDatabase` (`study_flow_database`).
