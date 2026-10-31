@@ -29,7 +29,3 @@ Navigation graph: `res/navigation/nav_graph.xml`. The bottom bar switches Assign
 3. Create `CourseDao`, `AssignmentDao`, `AppDatabase` (`study_flow_database`).
 4. Replace the bodies of `StudyRepository` functions with DAO calls inside coroutines
    and expose lists as `Flow`/`LiveData`.
-
-## Note
-This project was generated without running Gradle, so it has not been compiled or
-tested yet. If Android Studio reports an error after sync, send me the message and I will fix it.
