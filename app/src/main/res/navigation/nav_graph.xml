@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/assignmentListFragment">
+
+    <fragment
+        android:id="@+id/assignmentListFragment"
+        android:name="com.jeiu.studyflow.ui.AssignmentListFragment"
+        android:label="Assignments"
+        tools:layout="@layout/fragment_assignment_list">
+
+        <action
+            android:id="@+id/action_assignmentListFragment_to_assignmentDetailFragment"
+            app:destination="@id/assignmentDetailFragment" />
+        <action
+            android:id="@+id/action_assignmentListFragment_to_addEditAssignmentFragment"
+            app:destination="@id/addEditAssignmentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/assignmentDetailFragment"
+        android:name="com.jeiu.studyflow.ui.AssignmentDetailFragment"
+        android:label="Assignment Detail"
+        tools:layout="@layout/fragment_assignment_detail">
+
+        <argument
+            android:name="assignmentId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_assignmentDetailFragment_to_addEditAssignmentFragment"
+            app:destination="@id/addEditAssignmentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEditAssignmentFragment"
+        android:name="com.jeiu.studyflow.ui.AddEditAssignmentFragment"
+        android:label="Add / Edit Assignment"
+        tools:layout="@layout/fragment_add_edit_assignment">
+
+        <argument
+            android:name="assignmentId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/courseListFragment"
+        android:name="com.jeiu.studyflow.ui.CourseListFragment"
+        android:label="Courses"
+        tools:layout="@layout/fragment_course_list" />
+
+</navigation>
